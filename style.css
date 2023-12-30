@@ -108,3 +108,16 @@ form button {
   border-radius: 8px;
   border-right: 2px solid #ffffff;
 }
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  form button {
+    margin-left: 0;
+  }
+}
