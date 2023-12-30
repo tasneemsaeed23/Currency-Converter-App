@@ -65,6 +65,14 @@ function getExchangeRate() {
   exchangeRateTxt = document.querySelector(".exchange-rate");
   // Get the current value of the input
   let amountVal = amount.value;
+
+  // Check if the input value is not a number
+  if (isNaN(amountVal)) {
+    // Print a warning message
+    exchangeRateTxt.innerText = "Please enter a valid number";
+    return;
+  }
+
   // Check if the input value is empty or "0"
   if (amountVal == "" || amountVal == "0") {
     // If true, set the input value to "1" and update amountVal to 1
